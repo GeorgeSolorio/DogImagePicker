@@ -15,21 +15,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-1f-btj">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zSZ-3R-Ruo">
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
-                            </imageView>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49s-U8-C3R">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="216"/>
+                                    </pickerView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-1f-btj">
+                                        <rect key="frame" x="0.0" y="216" width="343" height="411"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="411" id="a7j-Px-Ew6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2cd-1f-btj" secondAttribute="bottom" constant="20" id="KbB-Qj-68E"/>
-                            <constraint firstItem="2cd-1f-btj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f82-Xf-Olx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cd-1f-btj" secondAttribute="trailing" constant="16" id="iLj-lH-BJk"/>
-                            <constraint firstItem="2cd-1f-btj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zIv-ik-4wO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zSZ-3R-Ruo" secondAttribute="bottom" constant="20" id="7e3-Yh-zAV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zSZ-3R-Ruo" secondAttribute="trailing" constant="16" id="VVg-Yd-qZD"/>
+                            <constraint firstItem="zSZ-3R-Ruo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fQQ-kw-OGB"/>
+                            <constraint firstItem="zSZ-3R-Ruo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z3L-YY-6ef"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="2cd-1f-btj" id="Tlz-20-rrw"/>
+                        <outlet property="pickerView" destination="49s-U8-C3R" id="qmn-3Z-lc2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
